@@ -1,0 +1,110 @@
+<div class="pokemon-details">
+  <mat-card class="pokemon-card">
+    <div class="pokemon-header">
+      <img
+        class="pokemon-image"
+        [src]="pokemonData.sprites.other.dream_world.front_default"
+        alt="{{ pokemonData.name }}"
+      />
+      <div class="pokemon-info">
+        <h1 class="pokemon-name">{{ pokemonData.name | titlecase }}</h1>
+        <p class="pokemon-category">
+          {{ pokemonData.types[0].type.name }} Pokemon
+        </p>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="pokemon-details">
+      <div class="pokemon-stat">
+        <h2 class="stat-label">Height</h2>
+        <p class="stat-value">{{ pokemonData.height }} in <i class="fas fa-arrows-alt-v"></i></p>
+      </div>
+      <div class="pokemon-stat">
+        <h2 class="stat-label">Type</h2>
+        <p class="stat-value">{{ pokemonData.types[0].type.name.toUpperCase() }} <span
+            class="fas fa-leaf"
+            style="color: green"
+            *ngIf="pokemonData.types[0].type.name === 'grass'"
+          ></span>
+          <span
+            class="fas fa-fire"
+            style="color: crimson"
+            *ngIf="pokemonData.types[0].type.name === 'fire'"
+          ></span>
+          <span
+            class="fas fa-water"
+            style="color: rgb(18, 132, 181)"
+            *ngIf="pokemonData.types[0].type.name === 'water'"
+          ></span>
+          <span
+            class="fas fa-bug"
+            style="color: white"
+            *ngIf="pokemonData.types[0].type.name === 'bug'"
+          ></span></p>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-card class="pokemon-stats-card">
+    <mat-grid-list cols="3" rowHeight="100%">
+        <mat-grid-tile>
+          <div class="stat">
+            <span
+              class="fas fa-weight"
+              style="color: white; font-size: 50px"
+            ></span>
+            <br />
+            <div class="stat-value">{{ pokemonData.weight }} kg</div>
+            <div class="stat-label">Weight</div>
+          </div>
+        </mat-grid-tile>
+        
+        <mat-grid-tile>
+          <div class="stat">
+            <i class="fas fa-dragon" style="color: white; font-size: 50px"></i>
+            <br />
+            <div class="stat-value">{{ pokemonData.stats[0].base_stat }}</div>
+            <div class="stat-label">HP</div>
+          </div>
+        </mat-grid-tile>
+        
+        <mat-grid-tile>
+          <div class="stat">
+            <i class="fas fa-fire" style="color: white; font-size: 50px"></i>
+            <br />
+            <div class="stat-value">{{ pokemonData.stats[1].base_stat }}</div>
+            <div class="stat-label">Attack</div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    <mat-grid-list cols="3" rowHeight="100%">
+      <mat-grid-tile>
+        <div class="stat">
+          <img src="../../assets/images/shield-solid.svg" width="50" class="power-icons">
+          <br />
+          <div class="stat-value">{{ pokemonData.stats[2].base_stat}}</div>
+          <div class="stat-label">Defense</div>
+        </div>
+      </mat-grid-tile>
+      
+      <mat-grid-tile>
+        <div class="stat">
+            <img src="../../assets/images/d-and-d.svg" width="50" class="power-icons">
+            <br />
+          <div class="stat-value">{{ pokemonData.stats[3].base_stat }}</div>
+          <div class="stat-label">Special Attack</div>
+        </div>
+      </mat-grid-tile>
+      
+      <mat-grid-tile>
+        <div class="stat">
+        <img src="../../assets/images/hand-fist-solid.svg" width="50" class="power-icons">
+
+          <br />
+          <div class="stat-value">{{ pokemonData.stats[4].base_stat }}</div>
+          <div class="stat-label">Special Defense</div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card>
+</div>

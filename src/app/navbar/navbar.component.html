@@ -1,0 +1,9 @@
+<div class="navbar" [class.responsive]="isResponsive">
+  <a routerLink="/" *ngIf="loggedIn !== null">Home</a>
+  <a routerLink="/signup" *ngIf="loggedIn == null">Signup</a>
+  <a>
+    <button class="nav-btn" *ngIf="loggedIn !== null" (click)="logout()">Logout</button>
+  </a>
+
+  <a href="javascript:void(0);" class="icon" (click)="toggleMenu()">&#9776;</a>
+</div>

@@ -1,0 +1,19 @@
+<div class="search-container">
+  <div class="search-bar">
+    <input
+      type="text"
+      name="search"
+      placeholder="SEARCH.."
+      class="search-inp"
+      (click)="goToHome()"
+      #search
+    />
+    <button class="search-btn" (click)="getValue(search.value)">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</div>
+
+<br /><br />
+
+<mat-divider></mat-divider>

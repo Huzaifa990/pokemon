@@ -1,0 +1,96 @@
+
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+    background-image: url(../../assets/images/bg-1.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    background-attachment: fixed;
+}
+
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col .fa-solid{
+    font-size: 20px;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-col div p{
+    padding: 0;
+}
+
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px ;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #FE0000;
+    box-sizing: border-box;
+    opacity: 0.8;
+    
+}
+
+.contact-col input:focus, .contact-col textarea:focus{
+    opacity: 1;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.3);
+
+}
+
+.contact-col h1{
+    color: white;
+    font-size: 30px;
+}
+
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.hero-btn:hover{
+    border: 1px solid #FE0000;
+    background-color: #FE0000;
+}
+
+.singup-link{
+    color: white;
+}
+
+.error-container-1{
+    background-color: #FE0000;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;    
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width: 800px){
+    .contact-col{
+        transition: 0.3s;
+        width: 80%;
+    }
+}
+

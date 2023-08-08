@@ -1,0 +1,60 @@
+<app-search></app-search>
+<div class="pokemon-container">
+  <div (click)="test(pk.id)" class="pokemons" *ngFor="let pk of pokemon | paginate: {itemsPerPage: 10, currentPage: page, totalItems: totalPokemons}">
+    <img
+        class="pokemon-image"
+        [src]="pk.sprites.other.dream_world.front_default"
+        alt="{{ pk.name }}"
+      
+      />
+      
+    <h1>{{ pk.name.toUpperCase() }}</h1>
+    <br />
+
+    <p>
+      <b>Type: </b> {{ pk.types[0].type.name }}
+      <span
+        class="fas fa-leaf"
+        style="color: green"
+        *ngIf="pk.types[0].type.name === 'grass'"
+      ></span>
+      <span
+        class="fas fa-fire"
+        style="color: crimson"
+        *ngIf="pk.types[0].type.name === 'fire'"
+      ></span>
+      <span
+        class="fas fa-water"
+        style="color: rgb(18, 132, 181)"
+        *ngIf="pk.types[0].type.name === 'water'"
+      ></span>
+      <span
+        class="fas fa-bug"
+        style="color: black"
+        *ngIf="pk.types[0].type.name === 'bug'"
+      ></span>
+    </p>
+    <mat-divider></mat-divider>
+
+    <br />
+    <p>
+      <b>Height: </b> {{ pk.height }} in <i class="fas fa-arrows-alt-v"></i>
+    </p>
+    <mat-divider></mat-divider>
+
+    <br />
+    <p>
+      <b>Health: </b> {{ pk.stats[0].base_stat }}
+      <i class="fas fa-heart" style="color: rgb(133, 12, 12)"></i>
+    </p>
+    <mat-divider></mat-divider>
+
+    <br />
+    <p>
+      <b>Power: </b> {{ pk.stats[1].base_stat }}
+      <i class="fas fa-bolt" style="color: gold"></i>
+    </p>
+  </div>
+</div>
+
+<pagination-controls (pageChange)="page = $event; pokemon= []; getPokemons()"></pagination-controls>

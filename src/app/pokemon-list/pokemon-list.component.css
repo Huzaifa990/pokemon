@@ -1,0 +1,46 @@
+.pokemons{
+    box-shadow: 1px 2px 5px rgb(0, 0, 0, 0.3);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 10px;
+    background-image: url("../../assets/images/pokeball.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: 240px;
+    background-position-y: 70%;
+}
+
+.pokemons p{
+    font-size: 18px;
+}
+
+.pokemons h1{
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.pokemons:hover{
+    box-shadow: 1px 10px 5px rgb(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.pokemon-container{
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+pagination-controls{
+    text-align: center;
+}
+
+.pokemon-image{
+    width: 150px;
+    height: 150px;
+    padding-bottom: 10px;
+}
+

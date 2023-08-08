@@ -1,0 +1,19 @@
+<div class="contact-col">
+        <div class="error-container-1" *ngIf="error">
+            <p *ngIf="errorMsg.name[0]"><i class="fas fa-exclamation-circle"></i> {{errorMsg.name[0]}}</p>
+            <p *ngIf="errorMsg.email[0]"><i class="fas fa-exclamation-circle"></i> {{errorMsg.email[0]}}</p>
+            <p *ngIf="errorMsg.password[0]"><i class="fas fa-exclamation-circle"></i> {{errorMsg.password[0]}}</p>
+            <p *ngIf="errorMsg.password[1]"><i class="fas fa-exclamation-circle"></i> {{errorMsg.password[1]}}</p>
+        </div>
+        <h1>Create an account</h1>
+        <input type="text" name="userName" placeholder="NAME: " #name>
+        <input type="email" name="userEmail" placeholder="EMAIL: " #email>
+        <input type="tel" name="phone" placeholder="Phone Number: " #tel>
+        <input type="text" name="gender" placeholder="Gender: " #gender>
+        <input type="password" name="password" placeholder="Password: " #password>
+        <input type="password" name="confirm-password" placeholder="Confirm Password: " #confirmPassword>
+        
+        <button class="hero-btn red-btn" (click)="getData(name.value, email.value, tel.value, gender.value, password.value, confirmPassword.value)">Register</button>
+        <br> <br>
+        <a routerLink="/signin" class="singup-link">Already have an account?</a>
+</div>

@@ -1,0 +1,12 @@
+<div class="contact-col">
+    <div class="error-container-1" *ngIf="error">
+        <p><i class="fas fa-exclamation-circle"></i> {{errorMsg}}</p>
+    </div>
+    <h1>Sign In</h1>
+    <input type="email" name="userEmail" placeholder="EMAIL: " #email>
+    <input type="password" name="password" placeholder="Password: " #password>
+    
+    <button class="hero-btn red-btn" (click)="getData2(email.value, password.value)">Login</button>
+    <br> <br>
+    <a routerLink="/signup" class="singup-link">Create an account</a>
+</div>

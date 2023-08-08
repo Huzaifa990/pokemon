@@ -1,0 +1,8 @@
+header{
+    background-color: lightslategrey;
+    color: white;
+    height: 50vh;
+    background-image: url("../../assets/images/bg-1.png");
+    background-size: cover;
+    background-position: center;
+}
